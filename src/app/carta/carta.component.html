@@ -1,0 +1,142 @@
+<div class="carta mt-5">
+  <h1 class="titulo mb-4">Carta de Liberación de Servicio Social</h1>
+
+  <form (ngSubmit)="onSubmit()" #cartaForm="ngForm">
+    <div class="form-group">
+      <label for="epys"
+        >Nombre del EPyS (Coordinador de Servicio Social):</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="epys"
+        name="epys"
+        [(ngModel)]="carta.epys"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="subjefe">Nombre del Subjefe(a):</label>
+      <input
+        type="text"
+        class="form-control"
+        id="subjefe"
+        name="subjefe"
+        [(ngModel)]="carta.subjefe"
+        required
+      />
+    </div>
+
+    <p>
+      PRESENTE: Sirva por este medio para declarar formalmente la culminación
+      del periodo de Servicio Social, realizado por el alumno(a):
+    </p>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          id="nombre_alumno"
+          name="nombre_alumno"
+          [(ngModel)]="carta.nombre_alumno"
+          placeholder="Nombre del alumno(a)"
+          required
+        />
+      </div>
+      <div class="form-group col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          id="matricula"
+          name="matricula"
+          [(ngModel)]="carta.matricula"
+          placeholder="Número de matrícula"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          id="carrera_alumno"
+          name="carrera_alumno"
+          [(ngModel)]="carta.carrera_alumno"
+          placeholder="Carrera del alumno"
+          required
+        />
+      </div>
+      <div class="form-group col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          id="institucion"
+          name="institucion"
+          [(ngModel)]="carta.institucion"
+          placeholder="Institución donde se realizó el servicio social"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          id="supervisor"
+          name="supervisor"
+          [(ngModel)]="carta.supervisor"
+          placeholder="Nombre de la supervisora o supervisor"
+          required
+        />
+      </div>
+      <div class="form-group col-md-3">
+        <label for="fecha_inicio">Fecha de inicio:</label>
+        <input
+          type="date"
+          class="form-control"
+          id="fecha_inicio"
+          name="fecha_inicio"
+          [(ngModel)]="carta.fecha_inicio"
+          required
+        />
+      </div>
+      <div class="form-group col-md-3">
+        <label for="fecha_fin">Fecha de fin:</label>
+        <input
+          type="date"
+          class="form-control"
+          id="fecha_fin"
+          name="fecha_fin"
+          [(ngModel)]="carta.fecha_fin"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <p>
+        Se extiende la presente para los fines que al interesado (a) convengan,
+        el día:
+      </p>
+      <input
+        type="date"
+        class="form-control"
+        id="fecha_extension"
+        name="fecha_extension"
+        [(ngModel)]="carta.fecha_extension"
+        required
+      />
+    </div>
+
+    <button type="submit" class="btn btn-guardar">Guardar</button>
+  </form>
+  <button (click)="verDatosGuardados()" class="btn btn-primary mt-3">
+    Mostrar datos
+  </button>
+</div>
